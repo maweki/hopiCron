@@ -1,0 +1,33 @@
+# This is a sample crontab file. Change this or create your own.
+# All lines are commented out for all our convenience.
+# I will omit the "if you uncomment this line"-part
+
+# If you don't know what cron is or how to write a crontab file, consult your local manpage
+# malformed lines will just be ignored, except in some crazy unprobable cases
+# for which a certain developer was just too lazy to check for.
+# please comment out your malformed lines or write correct ones
+
+# before I forget: Be a sweatheart and only use ONE tab or space as a field seperator. :) 
+
+# This job will be executed every monday to friday at midnight
+# 0 0 * * 1-4 http://yourdomain/yourjob
+# It's the same as
+# 0 0 * * 1,2,3,4 http://yourdomain/yourjob
+# since I've taken the time to impliment named entities, this will also execute jobs at midnight (daily)
+# @midnight http://yourdomain/yourjob
+# @daily http://yourdomain/yourjob
+
+# can you guess, what this one does? Entities rule!
+# @weekly http://yourdomain/yourjob
+
+# this job runs sunday at ten
+# 0 10 * * 0 http://yourdomain/yourjob
+# this one does not - BIG DIFFERENCE TO COMMON CRON IMPLEMENTATIONS - sorry for your inconvenience
+# 0 10 * * 7 http://yourdomain/yourjob
+# this one does
+# 0 10 * * sun http://yourdomain/yourjob
+
+# this job runs every 10 minutes
+# */10 * * * * http://yourdomain/yourjob
+# this job runs every 7 minutes (well, not exactly, but I'll let you find this one out on your own)
+# */7 * * * * http://yourdomain/yourjob
